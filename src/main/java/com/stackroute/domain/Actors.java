@@ -7,17 +7,21 @@ public class Actors {
     private String gender;
     private int age;
 
-    @Value("Sahithi")
+    public Actors(String name, String gender, int age) {
+        this.name = name;
+        this.gender = gender;
+        this.age = age;
+    }
+
+
     public void setName(String name) {
 
         this.name = name;
     }
-    @Value("Female")
     public void setGender(String gender) {
 
         this.gender = gender;
     }
-    @Value("23")
     public void setAge(int age)
     {
 
