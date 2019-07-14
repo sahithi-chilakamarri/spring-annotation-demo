@@ -12,7 +12,6 @@ public class Actors {
         this.age = age;
     }
 
-
     public void setName(String name) {
 
         this.name = name;
