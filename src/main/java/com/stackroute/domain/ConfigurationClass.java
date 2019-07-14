@@ -17,19 +17,41 @@ public class ConfigurationClass {
     {
         return new Actors("Vijay","Male",29);
     }
+    @Bean
+    public Actors actorBean2()
+    {
+        return new Actors("Sharukh","Male",52);
+    }
 
     // This is to create movie bean
     @Bean
     public Movie movieBean()
     {
-        Movie movie=new Movie(actorBean1());
+        Movie movie=new Movie(actorBean());
         return movie;
     }
     @Bean
     public Movie movieBean1()
     {
-        Movie movie=new Movie();
-        movie.setActor(actorBean());
+        Movie movie=new Movie(actorBean1());
+        return movie;
+    }
+    @Bean
+    public Movie movieBean2()
+    {
+        Movie movie=new Movie(actorBean2());
+        return movie;
+    }
+    @Bean
+    public Movie movieBean4()
+    {
+        Movie movie=new Movie(actorBean2());
+        return movie;
+    }
+    @Bean
+    public Movie movieBean3()
+    {
+        Movie movie=new Movie(actorBean2());
         return movie;
     }
 }
