@@ -1,6 +1,7 @@
 package com.stackroute.domain;
 
 import com.stackroute.demo.BeanLifecycleDemoBean;
+import com.stackroute.demo.BeanPostProcessorDemoBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
@@ -29,6 +30,11 @@ public class ConfigurationClass {
         beanLifecycleDemoBean.customInit();
         beanLifecycleDemoBean.customDestroy();
         return beanLifecycleDemoBean;
+    }
+    @Bean
+    public BeanPostProcessorDemoBean beanPostProcessorDemoBean()
+    {
+        return new BeanPostProcessorDemoBean();
     }
 
 }
