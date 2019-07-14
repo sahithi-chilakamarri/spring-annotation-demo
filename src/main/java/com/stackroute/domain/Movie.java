@@ -6,10 +6,11 @@ import org.springframework.context.annotation.Scope;
 public class Movie  {
     private Actors actor;
 
-    public void setActor(Actors actor) {
-
+    public Movie(Actors actor) {
         this.actor = actor;
     }
+
+
     public void display()
     {
 
