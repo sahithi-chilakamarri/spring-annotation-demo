@@ -1,5 +1,6 @@
 package com.stackroute.domain;
 
+import com.stackroute.demo.BeanLifecycleDemoBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
@@ -21,6 +22,13 @@ public class ConfigurationClass {
     {
         Movie movie=new Movie(actorBean());
         return movie;
+    }
+    @Bean
+    public BeanLifecycleDemoBean beanLifecycleDemoBean(){
+        BeanLifecycleDemoBean beanLifecycleDemoBean=new BeanLifecycleDemoBean();
+        beanLifecycleDemoBean.customInit();
+        beanLifecycleDemoBean.customDestroy();
+        return beanLifecycleDemoBean;
     }
 
 }

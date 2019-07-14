@@ -8,9 +8,9 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class Main {
 
     public static void main(String[] args) {
-        //Dependency Injection using ApplicationContext
-        ApplicationContext context = new AnnotationConfigApplicationContext(ConfigurationClass.class);
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(ConfigurationClass.class);
         Movie movie=context.getBean("movieBean",Movie.class);
         movie.display();
+        context.close();
     }
 }
