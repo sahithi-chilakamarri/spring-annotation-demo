@@ -15,7 +15,7 @@ public class Movie implements ApplicationContextAware, BeanFactoryAware, BeanNam
     @Autowired
     @Qualifier("actorBean")
     private Actors actor;
-
+//Parameterized constructor
     public Movie(Actors actor) {
         this.actor = actor;
     }
@@ -23,6 +23,7 @@ public class Movie implements ApplicationContextAware, BeanFactoryAware, BeanNam
     public Movie() {
 
     }
+    //Setter method
 
     public void setActor(Actors actor) {
 
@@ -33,6 +34,7 @@ public class Movie implements ApplicationContextAware, BeanFactoryAware, BeanNam
 
         actor.display();
     }
+    //Overriding the methods of the interface
 
     @Override
     public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
