@@ -5,13 +5,13 @@ public class Actors {
     private String name;
     private String gender;
     private int age;
-
+//Constructor
     public Actors(String name, String gender, int age) {
         this.name = name;
         this.gender = gender;
         this.age = age;
     }
-
+//setter methods
     public void setName(String name) {
 
         this.name = name;
@@ -25,6 +25,7 @@ public class Actors {
 
         this.age = age;
     }
+    //Display
     public void display()
     {
 
