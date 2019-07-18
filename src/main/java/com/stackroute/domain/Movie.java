@@ -33,7 +33,7 @@ public class Movie implements ApplicationContextAware, BeanFactoryAware, BeanNam
 
         actor.display();
     }
-
+//Overriding the interface methods
     @Override
     public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
         System.out.println("It is BeanFactoryAware");
