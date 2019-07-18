@@ -5,7 +5,7 @@ public class Actors {
     private String name;
     private String gender;
     private int age;
-
+//Parameterized constructors
     public Actors(String name, String gender, int age) {
         this.name = name;
         this.gender = gender;
@@ -25,6 +25,7 @@ public class Actors {
 
         this.age = age;
     }
+    //To display the content
     public void display()
     {
 
